@@ -30,10 +30,7 @@ origin: https://github.com/HelgeKeck/uberlapse.git
 
 ```
 
-## Slicer Setup
-To use the Uberlapse you need to add some Klipper macros to your slicer configuration.
-
-### Prusa Slicer / Super Slicer
+## Prusa Slicer / Super Slicer
 Printer Settings -> Custom G-code -> Start Gcode -><br />
 ``START_UBERLAPSE LAYER_COUNT={total_layer_count} PRINT_MIN_X={bounding_box[0]} PRINT_MIN_Y={bounding_box[1]} PRINT_MAX_X={bounding_box[2]} PRINT_MAX_Y={bounding_box[3]}``
 
