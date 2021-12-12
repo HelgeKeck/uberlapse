@@ -4,9 +4,7 @@ Klipper Makros to create timelapse of 3D prints.
 
 # Installation
 
-## Installation
-On your Raspberry pi run:
-
+## On your Raspberry
 ```
 cd ~/
 git clone https://github.com/HelgeKeck/uberlapse.git
@@ -14,8 +12,7 @@ bash ~/uberlapse/install.sh
 ```
 
 ## Configure Moonraker update manager
-
-```
+```ini
 # moonraker.conf
 
 [update_manager uberlapse]
@@ -25,10 +22,7 @@ path: ~/uberlapse
 origin: https://github.com/HelgeKeck/uberlapse.git
 ```
 
-# Configuration
-
-### Define the Gcode Macro
-Include the macro file to your Klipper printer.cfg
+## Define the Gcode Macro
 ```ini
 # printer.cfg
 
