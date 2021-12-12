@@ -5,8 +5,7 @@ Klipper Makros to create timelapse of 3D prints.
 # Installation
 
 ## Installation
-To install Uberlapse you need to connect to your Raspberrypi via ssh and
-run following commands:
+On your Raspberrypi run:
 
 ```
 cd ~/
@@ -14,15 +13,7 @@ git clone https://github.com/HelgeKeck/uberlapse.git
 bash ~/uberlapse/install.sh
 ```
 
-This will clone the repository and execute the installer script.
-
-The script assumes that Klipper is also in your home directory under
-"klipper": `${HOME}/klipper` and "moonraker": `${HOME}\moonraker`.
-
 ## Enable updating with moonraker update manager
-
-This repo can be updated with the update manager of moonraker. To do so 
-add following to your 'moonraker.conf' 
 
 ```
 # moonraker.conf
