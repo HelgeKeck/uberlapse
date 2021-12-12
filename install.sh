@@ -1,5 +1,8 @@
 #!/bin/bash
-# Moonraker Timelapse component installer
+# Uberlapse Macro installer
+#
+# taken from https://github.com/mainsail-crew/moonraker-timelapse and modified
+# below comments are original
 #
 # Copyright (C) 2021 Christoph Frei <fryakatkop@gmail.com>
 # Slightly modified by Stephan Wendel aka KwadFan <me@stephanwe.de>
