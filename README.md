@@ -2,7 +2,7 @@
 Klipper Makros to create timelapse of 3D prints.
 
 Uberlapse can also make use of the V-Core Camera Slider to create moving timelapses.   
-Moonraker: https://github.com/HelgeKeck/vcore-slider/  
+V-Core Camera Slider: https://github.com/HelgeKeck/vcore-slider/  
 
 # Installation
 
