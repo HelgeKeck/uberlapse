@@ -4,6 +4,15 @@ Klipper Makros to create timelapse of 3D prints.
 Uberlapse can also make use of the V-Core Camera Slider to create moving timelapses.   
 V-Core Camera Slider: https://github.com/HelgeKeck/vcore-slider/  
 
+## Example Uberlapse Video 1
+[![Video Example](https://img.youtube.com/vi/H-ifAT6w3YU/0.jpg)](https://www.youtube.com/watch?v=H-ifAT6w3YU)    
+
+## Example Uberlapse Video 2
+[![Video Example](https://img.youtube.com/vi/6Ex2qVkM0Ds/0.jpg)](https://www.youtube.com/watch?v=6Ex2qVkM0Ds)    
+
+## Example Uberlapse Video 3
+[![Video Example](https://img.youtube.com/vi/HQpCxaaxgOE/0.jpg)](https://www.youtube.com/watch?v=HQpCxaaxgOE)    
+
 # Installation
 
 ## On your Raspberry
