@@ -12,9 +12,6 @@ V-Core Camera Slider: https://github.com/HelgeKeck/vcore-slider/
 [![Video Example](https://img.youtube.com/vi/hdajsakze78/0.jpg)](https://www.youtube.com/watch?v=hdajsakze78)    
 
 ## Uberlapse Camera slider example
-[![Video Example](https://img.youtube.com/vi/H-ifAT6w3YU/0.jpg)](https://www.youtube.com/watch?v=H-ifAT6w3YU)    
-
-## Uberlapse Camera slider example
 [![Video Example](https://img.youtube.com/vi/HQpCxaaxgOE/0.jpg)](https://www.youtube.com/watch?v=HQpCxaaxgOE)    
 
 # Installation
