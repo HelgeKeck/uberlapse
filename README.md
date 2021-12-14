@@ -9,6 +9,9 @@ Uberlapse can also make use of the V-Core Camera Slider to create moving timelap
 V-Core Camera Slider: https://github.com/HelgeKeck/vcore-slider/  
 
 ## Uberlapse Camera slider example
+[![Video Example](https://img.youtube.com/vi/hdajsakze78/0.jpg)](https://www.youtube.com/watch?v=hdajsakze78)    
+
+## Uberlapse Camera slider example
 [![Video Example](https://img.youtube.com/vi/H-ifAT6w3YU/0.jpg)](https://www.youtube.com/watch?v=H-ifAT6w3YU)    
 
 ## Uberlapse Camera slider example
