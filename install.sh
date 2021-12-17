@@ -31,6 +31,20 @@ KLIPPER_CONFIG_DIR="${HOME}/klipper_config"
 KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
 UBERLAPSE_CONFIG_DIR="${HOME}/klipper_config/uberlapse"
 
+function stop_klipper {
+    if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
+        echo "Klipper service found! Stopping during Install."
+        sudo systemctl stop klipper
+    else
+        echo "Klipper service not found, please install Klipper first"
+        exit 1
+    fi
+}
+
+function start_klipper {
+    echo "Restarting Klipper service!"
+    sudo systemctl restart klipper
+}
 
 function create_uberlapse_dir {
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
@@ -44,11 +58,11 @@ function create_uberlapse_dir {
 
 function link_uberlapse_macros {
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
-        echo "Linking macro file..."
-        ln -sf "${SRCDIR}/klipper_macro/uberlapse.cfg" "${KLIPPER_CONFIG_DIR}/uberlapse.cfg"
         if [ -d "${UBERLAPSE_CONFIG_DIR}" ]; then
             echo "Linking uberlapse macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/uberlapse.cfg" "${UBERLAPSE_CONFIG_DIR}/uberlapse.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/uberlapse/config.cfg" "${UBERLAPSE_CONFIG_DIR}/config.cfg"
+            echo "Linking uberlapse macro file..."
+            ln -sf "${SRCDIR}/klipper_macro/uberlapse/control.cfg" "${UBERLAPSE_CONFIG_DIR}/control.cfg"
             echo "Linking move macro file..."
             ln -sf "${SRCDIR}/klipper_macro/uberlapse/move.cfg" "${UBERLAPSE_CONFIG_DIR}/move.cfg"
             echo "Linking light macro file..."
@@ -99,9 +113,11 @@ while getopts "c:h" arg; do
 done
 
 # Run steps
+stop_klipper
 create_uberlapse_dir
 link_uberlapse_macros
 #link_uberlapse_extras
+start_klipper
 
 # If something checks status of install
 exit 0
