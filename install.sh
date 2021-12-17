@@ -60,19 +60,19 @@ function link_uberlapse_macros {
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
         if [ -d "${UBERLAPSE_CONFIG_DIR}" ]; then
             echo "Linking uberlapse macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/config.cfg" "${UBERLAPSE_CONFIG_DIR}/config.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/config.cfg" "${UBERLAPSE_CONFIG_DIR}/config.cfg"
             echo "Linking uberlapse macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/control.cfg" "${UBERLAPSE_CONFIG_DIR}/control.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/control.cfg" "${UBERLAPSE_CONFIG_DIR}/control.cfg"
             echo "Linking move macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/move.cfg" "${UBERLAPSE_CONFIG_DIR}/move.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/move.cfg" "${UBERLAPSE_CONFIG_DIR}/move.cfg"
             echo "Linking light macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/light.cfg" "${UBERLAPSE_CONFIG_DIR}/light.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/light.cfg" "${UBERLAPSE_CONFIG_DIR}/light.cfg"
             echo "Linking frame macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/frame.cfg" "${UBERLAPSE_CONFIG_DIR}/frame.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/frame.cfg" "${UBERLAPSE_CONFIG_DIR}/frame.cfg"
             echo "Linking retraction macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/retraction.cfg" "${UBERLAPSE_CONFIG_DIR}/retraction.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/retraction.cfg" "${UBERLAPSE_CONFIG_DIR}/retraction.cfg"
             echo "Linking parking macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/uberlapse/parking.cfg" "${UBERLAPSE_CONFIG_DIR}/parking.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/parking.cfg" "${UBERLAPSE_CONFIG_DIR}/parking.cfg"
         else
             echo -e "ERROR: ${UBERLAPSE_CONFIG_DIR} not found."
             exit 1
