@@ -28,6 +28,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 
 # Default Parameters
 KLIPPER_CONFIG_DIR="${HOME}/klipper_config"
+KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
 UBERLAPSE_CONFIG_DIR="${HOME}/klipper_config/uberlapse"
 
 
@@ -37,12 +38,11 @@ function create_uberlapse_dir {
         mkdir "${UBERLAPSE_CONFIG_DIR}"
     else
         echo -e "ERROR: ${KLIPPER_CONFIG_DIR} not found."
-        echo -e "Try:\nUsage: ${0} -c /path/to/klipper_config\nExiting..."
         exit 1
     fi
 }
 
-function link_uberlapse {
+function link_uberlapse_macros {
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
         echo "Linking macro file..."
         ln -sf "${SRCDIR}/klipper_macro/uberlapse.cfg" "${KLIPPER_CONFIG_DIR}/uberlapse.cfg"
@@ -61,12 +61,20 @@ function link_uberlapse {
             ln -sf "${SRCDIR}/klipper_macro/uberlapse/parking.cfg" "${UBERLAPSE_CONFIG_DIR}/parking.cfg"
         else
             echo -e "ERROR: ${UBERLAPSE_CONFIG_DIR} not found."
-            echo -e "Try:\nUsage: ${0} -c /path/to/klipper_config\nExiting..."
             exit 1
         fi
     else
         echo -e "ERROR: ${KLIPPER_CONFIG_DIR} not found."
-        echo -e "Try:\nUsage: ${0} -c /path/to/klipper_config\nExiting..."
+        exit 1
+    fi
+}
+
+function link_uberlapse_extras {
+    if [ -d "${KLIPPY_EXTRAS}" ]; then
+        echo "Linking extra file..."
+        ln -sf "${SRCDIR}/klipper_extra/ul_snapshot.py" "${KLIPPY_EXTRAS}/ul_snapshot.py"
+    else
+        echo -e "ERROR: ${KLIPPY_EXTRAS} not found."
         exit 1
     fi
 }
@@ -92,7 +100,8 @@ done
 
 # Run steps
 create_uberlapse_dir
-link_uberlapse
+link_uberlapse_macros
+#link_uberlapse_extras
 
 # If something checks status of install
 exit 0
