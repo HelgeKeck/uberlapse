@@ -66,7 +66,7 @@ function link_uberlapse_macros {
             echo "Linking move macro file..."
             ln -sf "${SRCDIR}/klipper_macro/slider.cfg" "${UBERLAPSE_CONFIG_DIR}/slider.cfg"
             echo "Linking light macro file..."
-            ln -sf "${SRCDIR}/klipper_macro/light.cfg" "${UBERLAPSE_CONFIG_DIR}/light.cfg"
+            ln -sf "${SRCDIR}/klipper_macro/led.cfg" "${UBERLAPSE_CONFIG_DIR}/led.cfg"
             echo "Linking frame macro file..."
             ln -sf "${SRCDIR}/klipper_macro/frame.cfg" "${UBERLAPSE_CONFIG_DIR}/frame.cfg"
             echo "Linking retraction macro file..."
