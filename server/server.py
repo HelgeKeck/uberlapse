@@ -20,14 +20,14 @@ def reset():
 def captureasync():
     global FRAME
     FRAME += 1 
-    os.system ('raspistill --saturation 5 --awb shade --flicker 50hz --hflip --vflip --nopreview --width 3840 --height 2160 --quality 100 --timeout 2000 --output /media/usbhdd/frames/' + str(FRAME).rjust(5, '0') + '.jpg')
+    os.system ('raspistill --saturation 5 --ISO 200 --awb greyworld --metering spot --shutter 66667 --hflip --vflip --nopreview --width 3840 --height 2160 --quality 100 --timeout 2000 --output /media/usbhdd/frames/' + str(FRAME).rjust(5, '0') + '.jpg')
     return 'ok'
 
 @app.route('/capture')
 def capture():
     global FRAME
     FRAME += 1 
-    subprocess.Popen(['raspistill --saturation 5 --awb shade --flicker 50hz --hflip --vflip --nopreview --width 3840 --height 2160 --quality 100 --timeout 2000 --output /media/usbhdd/frames/' + str(FRAME).rjust(5, '0') + '.jpg'], shell=True)
+    subprocess.Popen(['raspistill --saturation 5 --ISO 200 --awb greyworld --metering spot --shutter 66667 --hflip --vflip --nopreview --width 3840 --height 2160 --quality 100 --timeout 2000 --output /media/usbhdd/frames/' + str(FRAME).rjust(5, '0') + '.jpg'], shell=True)
     return 'ok'
 
 @app.route('/renderasync')
