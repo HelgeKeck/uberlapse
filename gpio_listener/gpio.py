@@ -32,7 +32,7 @@ def loop():
         frame_state = gpio.input(FRAME_PIN)
         if frame_state:
             print('taking snapshot...')
-            response = requests.get(ENDPOINT + '/capture', data='')
+            response = requests.get(ENDPOINT + '/captureasync', data='')
             if (response.ok):
                 print('ok')
             else:
@@ -47,7 +47,7 @@ def loop():
                     print('ok')
                 else:
                     print('error')
-                gpio.output(FRAME_PIN, gpio.LOW)
+                gpio.output(RESET_PIN, gpio.LOW)
             else:
                 render_state = gpio.input(RENDER_PIN)
                 if render_state:
