@@ -74,6 +74,8 @@ function link_uberlapse_macros {
             echo "Linking parking macro file..."
             ln -sf "${SRCDIR}/klipper_macro/parking.cfg" "${UBERLAPSE_CONFIG_DIR}/parking.cfg"
             echo "Linking parking macro file..."
+            ln -sf "${SRCDIR}/klipper_macro/gpio.cfg" "${UBERLAPSE_CONFIG_DIR}/gpio.cfg"
+            echo "Linking parking macro file..."
             ln -sf "${SRCDIR}/klipper_macro/test.cfg" "${UBERLAPSE_CONFIG_DIR}/test.cfg"
         else
             echo -e "ERROR: ${UBERLAPSE_CONFIG_DIR} not found."
