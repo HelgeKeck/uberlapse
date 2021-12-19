@@ -90,7 +90,7 @@ function link_uberlapse_macros {
 function link_uberlapse_extras {
     if [ -d "${KLIPPY_EXTRAS}" ]; then
         echo "Linking extra file..."
-        ln -sf "${SRCDIR}/klipper_extra/ul_snapshot.py" "${KLIPPY_EXTRAS}/ul_snapshot.py"
+        ln -sf "${SRCDIR}/klipper_extra/uberlapse.py" "${KLIPPY_EXTRAS}/uberlapse.py"
     else
         echo -e "ERROR: ${KLIPPY_EXTRAS} not found."
         exit 1
@@ -120,7 +120,7 @@ done
 stop_klipper
 create_uberlapse_dir
 link_uberlapse_macros
-#link_uberlapse_extras
+link_uberlapse_extras
 start_klipper
 
 # If something checks status of install

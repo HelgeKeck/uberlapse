@@ -1,6 +1,6 @@
 import requests
-import RPi.GPIO as gpio
 from time import sleep
+import RPi.GPIO as gpio
 
 
 FRAME_PIN = 21
@@ -31,32 +31,29 @@ def loop():
     while True: 
         frame_state = gpio.input(FRAME_PIN)
         if frame_state:
-            print('taking snapshot...')
             response = requests.get(ENDPOINT + '/captureasync', data='')
             if (response.ok):
-                print('ok')
+                print('snapshot ok')
             else:
-                print('error')
+                print('snapshot error')
             gpio.output(FRAME_PIN, gpio.LOW)
         else:
             reset_state = gpio.input(RESET_PIN)
             if reset_state:
-                print('reset...')
                 response = requests.get(ENDPOINT + '/reset', data='')
                 if (response.ok):
-                    print('ok')
+                    print('reset ok')
                 else:
-                    print('error')
+                    print('reset error')
                 gpio.output(RESET_PIN, gpio.LOW)
             else:
                 render_state = gpio.input(RENDER_PIN)
                 if render_state:
-                    print('rendering...')
                     response = requests.get(ENDPOINT + '/render', data='')
                     if (response.ok):
-                        print('ok')
+                        print('render ok')
                     else:
-                        print('error')
+                        print('render error')
                     gpio.output(RENDER_PIN, gpio.LOW)
         sleep(0.5)
 

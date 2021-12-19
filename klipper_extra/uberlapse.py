@@ -1,7 +1,7 @@
 import logging
 import subprocess
 
-class UlSnapshot:
+class Uberlapse:
     def __init__(self, config):
         self.printer = config.get_printer()
         self.gcode = self.printer.lookup_object('gcode')
@@ -43,4 +43,4 @@ class UlSnapshot:
             
 
 def load_config(config):
-    return UlSnapshot(config)
+    return Uberlapse(config)
