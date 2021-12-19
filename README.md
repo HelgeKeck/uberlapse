@@ -32,6 +32,7 @@ origin: https://github.com/HelgeKeck/uberlapse.git
 ```ini
 # printer.cfg
 
+[uberlapse]
 [include uberlapse/config.cfg]
 
 ```
