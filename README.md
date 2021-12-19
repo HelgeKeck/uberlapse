@@ -28,7 +28,7 @@ path: ~/uberlapse
 origin: https://github.com/HelgeKeck/uberlapse.git
 ```
 
-## Define the Gcode Macro
+## Activate Uberlapse in your Klipper printer.cfg 
 ```ini
 # printer.cfg
 
