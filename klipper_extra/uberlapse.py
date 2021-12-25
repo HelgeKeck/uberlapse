@@ -8,7 +8,7 @@ class Uberlapse:
         self.printer = config.get_printer()
         self.gcode = self.printer.lookup_object('gcode')
         self.timeout = config.getfloat('timeout', 2., above=0.)
-        self.url = "http://192.168.0.199:9090"
+        self.url = "http://192.168.0.10:9090"
         self.endpoint = ""
         self.gcode.register_command('UL_SNAPSHOT', self.cmd_UL_SNAPSHOT, desc=("Calls the uberlapse server to take a image"))
         self.gcode.register_command('UL_RENDER', self.cmd_UL_RENDER, desc=("Calls the uberlapse server to start the timelapse rendering"))

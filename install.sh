@@ -47,6 +47,9 @@ function start_klipper {
 }
 
 function create_uberlapse_dir {
+    if [ -d "${UBERLAPSE_CONFIG_DIR}" ]; then
+        rm -rf "${UBERLAPSE_CONFIG_DIR}" 
+    fi
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
         echo "Creating uberlapse folder..."
         mkdir "${UBERLAPSE_CONFIG_DIR}"
