@@ -28,6 +28,7 @@ class Uberlapse:
 
     def _call_URL(self, param):
         reactor = self.printer.get_reactor()
+
         try:
             proc = subprocess.Popen("wget " + self.url + self.endpoint, shell=True)
         except Exception:
