@@ -27,9 +27,9 @@ set -e
 SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 
 # Default Parameters
-KLIPPER_CONFIG_DIR="${HOME}/klipper_config"
+KLIPPER_CONFIG_DIR="${HOME}/printer_data/config"
 KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
-UBERLAPSE_CONFIG_DIR="${HOME}/klipper_config/uberlapse"
+UBERLAPSE_CONFIG_DIR="${HOME}/printer_data/config/uberlapse"
 
 function stop_klipper {
     if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then

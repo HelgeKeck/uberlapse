@@ -47,7 +47,8 @@ def capture():
     if FOLDER != '':
         global FRAME
         FRAME += 1 
-        subprocess.Popen(['raspistill --saturation 5 --ISO 400 --awb shade --metering spot --shutter 33333 --flicker 50hz --rotation 180 --nopreview --width 3840 --height 2160 --quality 100 --timeout 2000 --output images/' + FOLDER + '/' + str(FRAME).rjust(5, '0') + '.jpg'], shell=True)
+        # subprocess.Popen(['raspistill --saturation 5 --ISO 400 --awb shade --metering spot --shutter 33333 --flicker 50hz --rotation 180 --nopreview --width 3840 --height 2160 --quality 100 --timeout 2000 --output images/' + FOLDER + '/' + str(FRAME).rjust(5, '0') + '.jpg'], shell=True)
+        subprocess.Popen(['libcamera-still --width 3840 --height 2160 -n 1 -q 100 -o images/' + FOLDER + '/' + str(FRAME).rjust(5, '0') + '.jpg'], shell=True)
         return 'ok'
     return 'error'
 
